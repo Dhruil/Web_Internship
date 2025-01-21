@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        small: '320px',
+                        mobile: '376px', //xsm
+                        xs: '576px', // Extra Small
+                        sm: '768px',
+                        md: '1024px',
+                        lg: '1280px',
+                        xl: '1440px',
+                        xxl: '1920px',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="font-roboto bg-white">
+    <!-- Header -->
+    <header class="shadow-sm">
+        <nav class="container xs:mx-0 mx-auto flex  xs:flex-row flex-col  small:align-end justify-end px-8 py-4">
+            <!-- Hamburger Icon -->
+            <button id="menu-toggle" class="block xs:hidden focus:outline-none text-gray-800 ml-72 px-4" aria-label="Toggle Menu">
+                <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Menu Items -->
+            <div id="menu"
+                class="hidden xs:flex flex-col xs:flex-row space-y-2 xs:space-y-0 xs:space-x-8 font-bold text-lg">
+                <div><a href="work.html" class="hover:text-[#FF6464]">Works</a></div>
+                
+                <div><a href="blog.html" class="hover:text-[#FF6464]">Blog</a></div>
+                <div><a href="#" class="hover:text-[#FF6464]">Contact</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container small:px-4 mobile:px-10">
+        <section>
+            <header>
+                <h1 class=" sm:text-5xl  font-bold mb-6 text-3xl">Work</h1>
+            </header>
+            <div class="xs:item-center ">
+                <div class="flex flex-col sm:flex-row   bg-white rounded-lg p-6 shadow-sm">
+                    
+                    <img src="images/work1.png" alt="Designing Dashboards"
+                        class="xs:w-full sm:w-48 h-auto rounded-lg mb-4 md:mb-0 sm:mr-6">
+                    <div>
+                        <a class="" href="work1.html">
+                        <h3 class="sm:text-3xl font-bold text-2xl mb-2">Designing Dashboards</h3></a>
+                        <span class="sm:text-lg px-2 py-1 rounded text-white font-bold bg-[#142850]">2020</span>
+                        <span class="sm:text-lg text-gray-600 ml-2">Dashboard</span>
+                        <p class="text-gray-600 mt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row   bg-white rounded-lg p-6 shadow-sm">
+                    <img src="images/work2.png" alt="Designing Dashboards"
+                        class="xs:w-full sm:w-48 h-auto rounded-lg mb-4 md:mb-0 sm:mr-6">
+                    <div>
+                        <h3 class="sm:text-3xl font-bold text-2xl mb-2">Vibrant Portraits of 2020</h3>
+                        <span class="sm:text-lg px-2 py-1 rounded text-white font-bold bg-[#142850]">2018</span>
+                        <span class="sm:text-lg text-gray-600 ml-2">Illustration</span>
+                        <p class="text-gray-600 mt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row   bg-white rounded-lg p-6 shadow-sm">
+                    <img src="images/work3.png" alt="Designing Dashboards"
+                        class="xs:w-full sm:w-48 h-auto rounded-lg mb-4 md:mb-0 sm:mr-6">
+                    <div>
+                        <h3 class="sm:text-3xl font-bold text-2xl mb-2">36 Days of Malayalam Type</h3>
+                        <span class="sm:text-lg px-2 py-1 rounded text-white font-bold bg-[#142850]">2018</span>
+                        <span class="sm:text-lg text-gray-600 ml-2">Typography</span>
+                        <p class="text-gray-600 mt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row   bg-white rounded-lg p-6 shadow-sm">
+                    <img src="images/work4.png" alt="Designing Dashboards"
+                        class="xs:w-full sm:w-48 h-auto rounded-lg mb-4 md:mb-0 sm:mr-6">
+                    <div>
+                        <h3 class="sm:text-3xl font-bold text-2xl mb-2">components</h3>
+                        <span class="sm:text-lg px-2 py-1 rounded text-white font-bold bg-[#142850]">2018</span>
+                        <span class="sm:text-lg text-gray-600 ml-2">Components , Design</span>
+                        <p class="text-gray-600 mt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim velit mollit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+        <div class="text-center">
+            <div class="space-x-4 mb-4">
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-xl"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm">Copyright ©2020 All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const toggleButton = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+    </script>
+</body>
+
+</html>

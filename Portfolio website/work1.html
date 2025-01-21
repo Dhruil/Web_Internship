@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing Dashboards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        small:'320px',
+                        mobile: '376px',
+                        xs: '576px', // Extra Small
+                        sm: '768px',
+                        md: '1024px',
+                        lg: '1280px',
+                        xl: '1440px',
+                        xxl: '1920px',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="font-roboto bg-white">
+    <!-- Header -->
+    <header class="shadow-sm">
+        <nav class="container xs:mx-0 mx-auto flex  xs:flex-row flex-col  small:align-end justify-end px-8 py-4">
+            <!-- Hamburger Icon -->
+            <button id="menu-toggle" class="block xs:hidden focus:outline-none text-gray-800 ml-72 px-4" aria-label="Toggle Menu">
+                <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Menu Items -->
+            <div id="menu"
+                class="hidden xs:flex flex-col xs:flex-row space-y-2 xs:space-y-0 xs:space-x-8 font-bold text-lg">
+                <div><a href="work.html" class="hover:text-[#FF6464]">Works</a></div>
+                
+                <div><a href="blog.html" class="hover:text-[#FF6464]">Blog</a></div>
+                <div><a href="#" class="hover:text-[#FF6464]">Contact</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container small:px-4 mobile:px-10 md:px-40 lg:px-80 xs:px-30 py-12">
+        <section>
+            <header class="my-4">
+                <h1 class="sm:text-4xl font-bold mb-12 text-3xl ">Designing Dashboards with usability in mind</h1>
+                <span class="text-lg px-2 py-1  rounded text-white font-bold bg-[#FF6464]">2020</span><span class="sm:text-xl text-lg text-gray-600 ml-4">Dashboard, User Experience Design</span>
+                <p class="text-gray-600 my-10">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+
+            </header>
+            <div class="flex justify-between mb-12">
+                <img src="images\work1\image1.png" alt="Dashboard Design" class="rounded-lg shadow-lg sm:w-50">
+            </div>
+            <h3 class="sm:text-3xl text-2xl font-bold my-4">Heading 1</h3>
+            <h4 class="sm:text-2xl text-xl mb-4 font-bold ">Heading 2</h4>
+            <p class="text-gray-600 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <div class="flex justify-center flex-col my-12">
+                <img src="images\work1\image2.png" alt="Additional Content" class="rounded-lg  shadow-lg sm:w-50">
+            
+                <img src="images\work1\image3.png" alt="Additional Content" class="rounded-lg my-12 shadow-lg sm:w-50">
+            </div>
+
+        </section>
+    </main>
+
+     <!-- Footer -->
+  <footer class="py-6">
+    <div class="text-center">
+      <div class="space-x-6 mb-4">
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="text-gray-600">Copyright ©2020 All rights reserved</p>
+    </div>
+  </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const toggleButton = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        small: '320px',
+                        mobile: '376px',
+                        xs: '576px', // Extra Small
+                        sm: '800px',
+                        md: '1024px',
+                        lg: '1280px',
+                        xl: '1440px',
+                        xxl: '1920px',
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="font-roboto text-gray-800">
+    <!-- Header -->
+    <header class="shadow-sm">
+        <nav class="container xs:mx-0 mx-auto flex  xs:flex-row flex-col  small:align-end justify-end px-8 py-4">
+            <!-- Hamburger Icon -->
+            <button id="menu-toggle" class="block xs:hidden focus:outline-none text-gray-800 ml-72 px-4" aria-label="Toggle Menu">
+                <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Menu Items -->
+            <div id="menu"
+                class="hidden xs:flex flex-col xs:flex-row space-y-2 xs:space-y-0 xs:space-x-8 font-bold text-lg">
+                <div><a href="work.html" class="hover:text-[#FF6464]">Works</a></div>
+                
+                <div><a href="blog.html" class="hover:text-[#FF6464]">Blog</a></div>
+                <div><a href="#" class="hover:text-[#FF6464]">Contact</a></div>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Profile Section -->
+        <section class="small:px-6 sm:px-4 xs:px-32 md:px-36 lg:px-60 py-12 bg-white p-8 my-6 flex flex-col sm:flex-row items-center justify-between">
+            <div class="max-w-lg text-center sm:text-left small:mb-10">
+                <h1 class="lg:text-5xl sm:text-3xl md:text-4xl small:text-3xl  font-bold text-gray-800 mb-4 leading-tight">
+                    Hi, I am John,<br>Creative Technologist
+                </h1>
+                <p class=" text-gray-600 mb-8">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                    duis enim
+                    velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+                <button class="px-6 py-2 bg-red-500 text-xl text-white font-bold rounded hover:bg-red-600">
+                    Download Resume
+                </button>
+            </div>
+            <div class="mb-10">
+                <img src="images/profile.png" alt="Profile Picture"
+                    class="lg:w-64 lg:h-64 md:w-56 md:h-56 w-64 h-64 rounded-full border-4 border-gray-100 shadow-lg">
+            </div>
+        </section>
+
+        <!-- Recent Posts Section -->
+        <section class="small:px-6 sm:px-4 xs:px-32 md:px-36 lg:px-60 py-12 mb-16 bg-[#EDF7FA]">
+            <div class="flex flex-row xs:justify-between mobile:justify-center items-center mb-6">
+                <h2 class="text-2xl small:text-center xs:text-left">Recent Posts</h2>
+                <a href="#" class="text-blue-500 hover:underline small:hidden xs:block">View all</a>
+            </div>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-8">
+                <div class="bg-white p-6 rounded-lg shadow w-full sm:w-[36rem]">
+                    <h3 class="lg:text-3xl text-2xl font-bold mb-2">Making a design system from scratch</h3>
+                    <p class="text-lg text-gray-600 mb-4">12 Feb 2020 | Design, Pattern</p>
+                    <p class="text-gray-600">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim
+                        velit mollit.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow w-full sm:w-[36rem]">
+                    <h3 class="lg:text-3xl text-2xl font-bold mb-2">Creating pixel perfect icons in Figma</h3>
+                    <p class="text-lg text-gray-600 mb-4">12 Feb 2020 | Figma, Icon Design</p>
+                    <p class="text-gray-600">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim
+                        velit mollit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Works Section -->
+        <section class="small:px-8 sm:px-4 xs:px-32 md:px-36 lg:px-60 mb-16">
+            <h2 class="text-2xl mb-6 small:text-center xs:text-left">Featured Works</h2>
+            <div class="space-y-6">
+                <div class="flex bg-white rounded-lg sm:flex-row flex-col xs:mb-10">
+                    <img src="images/work1.png" alt="Project 1" class="sm:w-48 xs:w-full md:w-56 lg:w-56 small:mb-10 sm:mb-0 h-auto rounded-lg mr-6 lg:mr-10">
+                    <div>
+                        <h3 class="lg:text-3xl md:text-2xl xs:text-2xl small:text-2xl font-bold mb-8">Designing Dashboards</h3>
+                        <span class="text-lg px-2 py-1 rounded text-white font-bold mr-1 bg-[#142850]">2020</span>
+                        <span class="text-xl text-gray-600 ml-1">Dashboard</span>
+                        <p class="text-gray-600 mt-6">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                            consequat duis
+                            enim velit mollit.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex bg-white rounded-lg sm:flex-row flex-col xs:mb-10">
+                    <img src="images/work2.png" alt="Project 2" class="sm:w-48 xs:w-full md:w-56 lg:w-56 small:mb-10 sm:mb-0 h-auto rounded-lg mr-6 lg:mr-10">
+                    <div>
+                        <h3 class="lg:text-3xl md:text-2xl xs:text-2xl small:text-2xl font-bold mb-8">Vibrant Portraits of 2020</h3>
+                        <span class="text-lg px-2 py-1 rounded text-white font-bold mr-1 bg-[#142850]">2020</span>
+                        <span class="text-xl text-gray-600 ml-1">Illustration</span>
+                        <p class="text-gray-600 mt-6">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                            consequat duis
+                            enim velit mollit.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex bg-white rounded-lg sm:flex-row flex-col xs:mb-10">
+                    <img src="images/work3.png" alt="Project 3" class="sm:w-48 xs:w-full md:w-56 lg:w-56 small:mb-10 sm:mb-0 h-auto rounded-lg mr-6 lg:mr-10">
+                    <div>
+                        <h3 class="lg:text-3xl md:text-2xl xs:text-2xl small:text-2xl font-bold mb-8">36 Days of Malayalam Type</h3>
+                        <span class="text-lg px-2 py-1 rounded text-white font-bold mr-1 bg-[#142850]">2018</span>
+                        <span class="text-xl text-gray-600 ml-1">Typography</span>
+                        <p class="text-gray-600 mt-6">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                            consequat duis
+                            enim velit mollit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-6">
+        <div class="text-center">
+            <div class="space-x-6 mb-4">
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm">Copyright ©2020 All rights reserved</p>
+        </div>
+    </footer>
+    <script>
+        const toggleButton = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+    </script>
+</body>
+
+</html>

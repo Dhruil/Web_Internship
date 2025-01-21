@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        small:'320px',
+                        mobile: '376px',
+                        xs: '576px', // Extra Small
+                        sm: '768px',
+                        md: '1024px',
+                        lg: '1280px',
+                        xl: '1440px',
+                        xxl: '1920px',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-white">
+        <!-- Header -->
+        <header class="shadow-sm">
+            <nav class="container xs:mx-0 mx-auto flex  xs:flex-row flex-col  small:align-end justify-end px-8 py-4">
+                <!-- Hamburger Icon -->
+                <button id="menu-toggle" class="block xs:hidden focus:outline-none text-gray-800 ml-72 px-4" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+                </button>
+    
+                <!-- Menu Items -->
+                <div id="menu"
+                    class="hidden xs:flex flex-col xs:flex-row space-y-2 xs:space-y-0 xs:space-x-8 font-bold text-lg">
+                    <div><a href="work.html" class="hover:text-[#FF6464]">Works</a></div>
+                    
+                    <div><a href="blog.html" class="hover:text-[#FF6464]">Blog</a></div>
+                    <div><a href="#" class="hover:text-[#FF6464]">Contact</a></div>
+                </div>
+            </nav>
+        </header>
+<main class="container xs:px-2 sm:px-10 md:px-48 px-10 py-12 small:px-4 mobile:px-10 ">
+    <header>
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="sm:text-5xl text-3xl font-bold">Blog</h1>
+        </div>
+    </header>
+    
+        <article class=" p-6 rounded-lg">
+            <h2 class=" sm:text-3xl text-2xl font-semibold">UI Interactions of the week</h2>
+            <p class="text-gray-600 sm:text-xl">12 Feb 2019  |  Express, Handlebars</p>
+            <p class="mt-2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </article>
+        <hr>
+        <article class=" p-6 rounded-lg">
+            <h2 class="text-3xl font-semibold">UI Interactions of the week</h2>
+            <p class="text-gray-600 text-xl">12 Feb 2019  |  Express, Handlebars</p>
+            <p class="mt-2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </article>
+        <hr>
+        <article class=" p-6 rounded-lg">
+            <h2 class="text-3xl font-semibold">UI Interactions of the week</h2>
+            <p class="text-gray-600 text-xl">12 Feb 2019  |  Express, Handlebars</p>
+            <p class="mt-2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </article>
+        <hr>
+        <article class=" p-6 rounded-lg">
+            <h2 class="text-3xl font-semibold">UI Interactions of the week</h2>
+            <p class="text-gray-600 text-xl">12 Feb 2019  |  Express, Handlebars</p>
+            <p class="mt-2">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </article>
+        <hr>
+
+    </main>
+     <!-- Footer -->
+  <footer class="py-6">
+    <div class="text-center">
+      <div class="space-x-6 mb-4">
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 text-3xl"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="text-gray-600">Copyright ©2020 All rights reserved</p>
+    </div>
+  </footer>
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    toggleButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        if (menu.classList.contains('hidden')) {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+        }
+    });
+</script>
+</body>
+</html>
